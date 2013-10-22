@@ -31,6 +31,7 @@
     "grunt-jslint": "~1.1.1",
     "travis-cov": "~0.2.4",
     "underscore": "~1.5.2",
-    "grunt-mocha-cov": "0.0.7"
+    "grunt-mocha-cov": "0.0.7",
+    "node-localstorage": "~0.3.4"
   }
 }
