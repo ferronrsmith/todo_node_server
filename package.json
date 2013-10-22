@@ -20,10 +20,11 @@
     "jade": "*"
   },
   "devDependencies": {
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
     "underscore": "~1.5.2",
     "supertest": "~0.8.0",
     "mocha": "~1.13.0",
-    "grunt": "~0.4.1",
     "grunt-mocha": "~0.4.1",
     "chai": "~1.8.1",
     "grunt-contrib-watch": "~0.5.1",
