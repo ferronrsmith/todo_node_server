@@ -87,7 +87,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-mocha-cov');
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('test', ['mochacov']);
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.registerTask('default', ['jslint', 'mochacov']);
 
 
 };
