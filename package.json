@@ -1,38 +1,38 @@
-
 {
-    "name": "application-name",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node app.js",
-        "test": "grunt",
-        "travis-cov": {
-            "threshold": 90
-        },
-        "blanket": {
-            "pattern": [
-                "app.js",
-                "routes"
-            ]
-        }
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "grunt",
+    "travis-cov": {
+      "threshold": 90
     },
-    "dependencies": {
-        "express": "3.3.5",
-        "jade": "*"
-    },
-    "devDependencies": {
-        "supertest": "~0.8.0",
-        "mocha": "~1.13.0",
-        "grunt": "~0.4.1",
-        "grunt-mocha": "~0.4.1",
-        "chai": "~1.8.1",
-        "grunt-contrib-watch": "~0.5.1",
-        "grunt-mocha-test": "~0.7.0",
-        "blanket": "~1.1.5",
-        "grunt-jslint": "~1.1.1",
-        "travis-cov": "~0.2.4",
-        "underscore": "~1.5.2",
-        "grunt-mocha-cov": "0.0.7",
-        "node-localstorage": "~0.3.4"
+    "blanket": {
+      "pattern": [
+        "app.js",
+        "routes"
+      ]
     }
+  },
+  "dependencies": {
+    "express": "3.3.5",
+    "jade": "*"
+  },
+  "devDependencies": {
+    "supertest": "~0.8.0",
+    "mocha": "~1.13.0",
+    "grunt": "~0.4.1",
+    "grunt-mocha": "~0.4.1",
+    "chai": "~1.8.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-mocha-test": "~0.7.0",
+    "blanket": "~1.1.5",
+    "grunt-jslint": "~1.1.1",
+    "travis-cov": "~0.2.4",
+    "underscore": "~1.5.2",
+    "grunt-mocha-cov": "0.0.7",
+    "node-localstorage": "~0.3.4",
+    "mocha-term-cov-reporter": "~0.1.5"
+  }
 }
