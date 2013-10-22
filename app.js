@@ -1,4 +1,5 @@
-
+/*jslint node: true, nomen: true, devel : true */
+/*global delete*/
 /**
  * Module dependencies.
  */
@@ -11,6 +12,7 @@ var http = require('http');
 var path = require('path');
 
 var app = express();
+exports.app = app;
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -21,11 +23,11 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express['static'](path.join(__dirname, 'public')));
 
 // development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+if ('development' === app.get('env')) {
+    app.use(express.errorHandler());
 }
 
 app.get('/', routes.index);
@@ -34,8 +36,9 @@ app.get('/users', user.list);
 app.get('/todo', todo.list);
 app.post('/todo', todo.create);
 app.put('/todo/:id', todo.update);
-app.delete('/todo/:id', todo.remove);
+app['delete']('/todo/:id', todo.remove);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+http.createServer(app).listen(app.get('port'), function () {
+    "use strict";
+    console.log('Express server listening on port ' + app.get('port'));
 });
