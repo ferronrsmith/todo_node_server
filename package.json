@@ -33,6 +33,6 @@
     "underscore": "~1.5.2",
     "grunt-mocha-cov": "0.0.7",
     "node-localstorage": "~0.3.4",
-    "mocha-term-cov-reporter": "~0.1.5"
+    "mocha-term-cov-reporter": "https://github.com/ferronrsmith/mocha-term-cov-reporter/tarball/master"
   }
 }
