@@ -71,6 +71,12 @@ module.exports = function (grunt) {
             },
             coverage: {
                 options: {
+                    reporter: 'mocha-term-cov-reporter',
+                    coverage: true
+                }
+            },
+            coveralls: {
+                options: {
                     coveralls: {
                         serviceName: 'travis-ci'
                     }
@@ -78,6 +84,7 @@ module.exports = function (grunt) {
             },
             options: {
                 files: 'test/*.js',
+                ui: 'bdd',
                 colors : true
             }
         }
@@ -88,7 +95,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jslint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('default', ['jslint', 'mochacov']);
+    grunt.registerTask('test', ['jslint', 'mochacov:unit', 'mochacov:coverage']);
+    grunt.registerTask('default', ['jslint', 'mochacov:unit', 'mochacov:coverage', 'mochacov:coveralls']);
 
 
 };
