@@ -20,6 +20,7 @@
     "jade": "*"
   },
   "devDependencies": {
+    "underscore": "~1.5.2",
     "supertest": "~0.8.0",
     "mocha": "~1.13.0",
     "grunt": "~0.4.1",
@@ -31,7 +32,6 @@
     "blanket": "~1.1.5",
     "grunt-jslint": "~1.1.1",
     "travis-cov": "~0.2.4",
-    "underscore": "~1.5.2",
     "grunt-mocha-cov": "0.0.7",
     "node-localstorage": "~0.3.4",
     "mocha-term-cov-reporter": "~0.1.5"
